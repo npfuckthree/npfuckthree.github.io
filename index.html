@@ -1,114 +1,270 @@
 <!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-			<title>SWA Network 群组服 | 官方网站</title>
-			<meta charset="utf-8" />
-			<meta name="keywords" content="幻想浮城,swanf服务器,swanfserver,SWA Network 国际服,">
-			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-			<link rel="stylesheet" href="assets/css/main.css" />
-			<link rel="shortcut icon" href="images/cd.ico"/>
-			<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		</head>
-	<body class="is-preload">
+<head>
+    <title>SWA Network 群组服 | 官方网站</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="幻想浮城,swanf服务器,swanfserver,SWA Network 国际服,">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="shortcut icon" href="images/cd.ico"/>
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        /* Wrapper */
+        #wrapper {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Header */
+        #header {
+            background: #005a9e;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+        }
+        
+        #header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        #header .logo span {
+            color: #ccc;
+        }
+        
+        /* Menu */
+        #menu {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        
+        #menu .links,
+        #menu .actions {
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        #menu .links a,
+        #menu .actions a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        
+        #menu .links a:hover,
+        #menu .actions a:hover {
+            background: #005a9e;
+        }
+        
+        /* Banner */
+        #banner {
+            background: url('mc.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+            height: 100vh; /* 占满整个视口高度 */
+            width: 100vw;  /* 占满整个视口宽度 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        #banner img {
+            display: none; /* 隐藏img标签 */
+        }
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>SWANET Farm</strong> <span> 官方网站</span></a>
-						<nav>
-							<a href="#menu">菜单</a>
-						</nav>
-					</header>
+        #banner h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            z-index: 1; /* 确保标题在按钮之上 */
+            position: relative;
+        }
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="https://qm.qq.com/cgi-bin/qm/qr?k=MLGYGdm9ERTC2IX4p2--8cUdjvdwgHN_&jump_from=webapi&authKey=lYzWpbSOvgRtsElw1QQg3eH2mCPzs6f5wzOFSoOT+09bc9ybm5Nl1lJVQJgeOTYK">加入玩家交流群</a></li>
-						</ul>
-					</nav>
+        #banner .content {
+            position: relative;
+            z-index: 1; /* 确保内容在按钮之上 */
+            margin-top: 20px; /* 增加内容与按钮之间的间距 */
+        }
 
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<span class="image">
-								<img src="mc.jpg" alt="" />
-							</span>
-							<header class="major">
-								<h1>欢迎来到 SWANET Farm 官方网站</h1>
-							</header>
-							<div class="content">
-								<p id="h1"></p>
-								<ul class="actions ">
-									<li><a href="https://qm.qq.com/cgi-bin/qm/qr?k=MLGYGdm9ERTC2IX4p2--8cUdjvdwgHN_&jump_from=webapi&authKey=lYzWpbSOvgRtsElw1QQg3eH2mCPzs6f5wzOFSoOT+09bc9ybm5Nl1lJVQJgeOTYK" class="button next scrolly">加入QQ群游玩</a></li>
-								</ul>
-							</div>
-						</div>
-						
-					</section>
-					<script>
-					window.onload=function starttime(){
-					        time(h1,'2025/01/26');   
-					        ptimer = setTimeout(starttime,1000); 
-					}
-					    function time(obj,futimg){
-					        var nowtime = new Date().getTime(); 
-					        var futruetime =  new Date(futimg).getTime(); 
-					        var msec = nowtime-futruetime; 
-					        var time = (msec/1000);  
-					        var day = parseInt(time/86400); 
-					        var hour = parseInt(time/3600)-24*day;    
-					        var minute = parseInt(time%3600/60); 
-					        var second = parseInt(time%60); 
-					        obj.innerHTML="SWANF 已运行"+day+"天"+hour+"小时"+minute+"分"+second+"秒"+""
-					}
-					</script>
+        #banner .timer {
+            background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px; /* 调整文字框与标题之间的间距 */
+            color: #fff;
+            font-size: 1.2em;
+        }
 
-				<!-- Main -->
-					<div id="main">
+#banner .button {
+    background: #005a9e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 80px; /* 增加按钮顶部的间距 */
+    position: relative;
+    z-index: 1; /* 确保按钮在最上层 */
+}
 
-						<!-- One -->
-							<section id="one" class="tiles">
-						<!-- Two -->
-							<section id="two">
-								<div class="inner">
-									<header class="major">
-									</header>
-									<ul class="actions">
-										
-									</ul>
-								</div>
-							</section>
+#banner .button:hover {
+    background: #004080;
+}
 
-					</div>
+        
+        /* Main */
+        #main {
+            padding: 20px 0;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #main .tiles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        /* Footer */
+        #footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        #footer .copyright {
+            list-style: none;
+        }
+        
+        #footer .copyright a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        
+        #footer .copyright a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            #banner h1 {
+                font-size: 2em;
+            }
+            
+            #banner .button {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header" class="alt">
+            <a href="index.html" class="logo"><strong>SWANET Farm</strong> <span> 官方网站</span></a>
+        </header>
 
-				<!-- Contact -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="copyright">
-								<li>由<strong>Github Pages</strong>强力驱动</li><li><a href="https://space.bilibili.com/1269986692/">bilibili:NPickaxe11</a></li>
-							</ul>
-						</div>
-					</footer>
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+            </ul>
+        </nav>
 
-			</div>
+        <!-- Banner -->
+        <section id="banner" class="major">
+            <div class="inner">
+                <span class="image">
+                    <img src="mc.jpg" alt="" />
+                </span>
+                <header class="major">
+                    <h1>欢迎游玩 SWANET Farm！</h1>
+                </header>
+                <div class="content">
+                    <p id="h1" class="timer"></p> <!-- 为计时器添加一个文字框 -->
+                    <ul class="actions ">
+                        <li><a href="https://qm.qq.com/cgi-bin/qm/qr?k=MLGYGdm9ERTC2IX4p2--8cUdjvdwgHN_&jump_from=webapi&authKey=lYzWpbSOvgRtsElw1QQg3eH2mCPzs6f5wzOFSoOT+09bc9ybm5Nl1lJVQJgeOTYK" class="button next scrolly">加入QQ群游玩</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <script>
+            window.onload=function starttime(){
+                time(document.getElementById('h1'),'2025/01/26');   
+                ptimer = setTimeout(starttime,1000); 
+            }
+            function time(obj,futimg){
+                var nowtime = new Date().getTime(); 
+                var futruetime = new Date(futimg).getTime(); 
+                var msec = nowtime-futruetime; 
+                var time = (msec/1000);  
+                var day = parseInt(time/86400); 
+                var hour = parseInt(time/3600)-24*day;    
+                var minute = parseInt(time%3600/60); 
+                var second = parseInt(time%60); 
+                obj.innerHTML="SWANF 已运行"+day+"天"+hour+"小时"+minute+"分"+second+"秒"+"" 
+            }
+        </script>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <!-- Main -->
+        <div id="main">
+            <!-- One -->
+            <section id="one" class="tiles">
+            </section>
+            <!-- Two -->
+            <section id="two">
+                <div class="inner">
+                    <header class="major">
+                    </header>
+                    <ul class="actions">
+                    </ul>
+                </div>
+            </section>
+        </div>
 
-	</body>
-</html>
+        <!-- Contact -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="copyright">
+                    <li>由<strong>Github Pages</strong>强力驱动</li>
+                    <li><a href="https://space.bilibili.com/1269986692/">bilibili:NPickaxe11</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script[_{{{CITATION{{{_1{](https://github.com/AntonioEduardo-sm/projeto-gerenciador-de-provedor/tree/141a076f5421416ca1c7cb015d3ffcb22b42986e/servico.php)[_{{{CITATION{{{_2{](https://github.com/AnshumanAR04/Sound_Bound/tree/3e755b86ca409afc86f59e8e9b7adf2944b8dadc/genre.php)[_{{{CITATION{{{_3{](https://github.com/guilhermeabel/websim/tree/07acd29bf8b542ab5d8afa15c0257638795fb73c/resources%2Fviews%2Fwelcome.blade.php)[_{{{CITATION{{{_4{](https://github.com/trevorwinger/AutoBlogPostGenerator/tree/3adeb52a954d4668d0cf3e641aa90ccb47b2aa07/blog-maker.py)[_{{{CITATION{{{_5{](https://github.com/CimarronesIC471/Project/tree/38e90dfae60bca2c03224ed5b741ae6428f4eb9c/ProyectoV9%2FPermisosUSER.php)[_{{{CITATION{{{_6{](https://github.com/LqZww/love-you/tree/0fc5bcb7829199f18466b0c073ba931d9b6c79f8/js%2Fmain.js)
